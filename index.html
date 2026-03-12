@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial | Atualizado 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #fdfdfd; margin: 0; display: flex; flex-direction: column; align-items: center; color: #333; }
+        
+        /* Barra Superior - Rosa */
+        .top-bar { background: #e91e63; width: 100%; color: white; text-align: center; padding: 12px 0; font-size: 14px; font-weight: bold; letter-spacing: 1px; }
+        
+        /* Container Branco com borda Rosa suave */
+        .container { max-width: 450px; width: 92%; background: white; margin-top: 30px; padding: 25px; border-radius: 12px; border: 1px solid #fce4ec; box-shadow: 0 10px 25px rgba(233, 30, 99, 0.1); text-align: center; box-sizing: border-box; }
+        
+        /* Logo em Rosa */
+        .logo { font-size: 22px; color: #e91e63; font-weight: bold; margin-bottom: 20px; border-bottom: 2px solid #fce4ec; padding-bottom: 10px; text-transform: uppercase; }
+        
+        h2 { font-size: 20px; color: #444; line-height: 1.3; margin-top: 0; }
+        p { color: #666; font-size: 14px; }
+        
+        .quiz-box { margin-top: 20px; text-align: left; }
+        .step { display: none; }
+        .active { display: block; animation: fadeIn 0.4s ease-in-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Botões de Opção - Branco com borda Rosa */
+        .opt-btn { display: block; width: 100%; background: #ffffff; border: 2px solid #fce4ec; color: #e91e63; padding: 15px; margin-bottom: 12px; border-radius: 8px; cursor: pointer; text-align: center; font-size: 15px; transition: 0.3s; font-weight: bold; outline: none; }
+        .opt-btn:hover { background: #fce4ec; border-color: #e91e63; }
+        
+        #final-step { display: none; text-align: center; }
+        
+        /* Destaque da Oferta em tons de Rosa claro */
+        .highlight-box { background: #fff5f8; border: 1px solid #f8bbd0; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .price { font-size: 28px; color: #c2185b; font-weight: bold; }
+        
+        /* Botão de Ação Principal - Rosa Vibrante */
+        .cta-btn { display: block; width: 100%; background: #e91e63; color: white; padding: 18px 0; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; margin-top: 10px; box-sizing: border-box; transition: 0.3s; box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3); text-align: center; }
+        .cta-btn:hover { background: #c2185b; transform: translateY(-2px); }
+        
+        footer { margin-top: 50px; padding: 20px; font-size: 11px; color: #999; text-align: center; line-height: 1.6; width: 100%; box-sizing: border-box; }
+        footer a { color: #e91e63; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">ATUALIZADO 2026</div>
+
+<div class="container">
+    <div class="logo">PÁGINA INICIAL</div>
+
+    <div id="q1" class="step active">
+        <h2>Há quanto tempo você possui restrições em seu CPF?</h2>
+        <div class="quiz-box">
+            <button class="opt-btn" onclick="next('q1', 'q2')">Menos de 1 ano</button>
+            <button class="opt-btn" onclick="next('q1', 'q2')">Entre 1 e 3 anos</button>
+            <button class="opt-btn" onclick="next('q1', 'q2')">Mais de 5 anos</button>
+        </div>
+    </div>
+
+    <div id="q2" class="step">
+        <h2>Qual o valor estimado de sua pendência atual?</h2>
+        <div class="quiz-box">
+            <button class="opt-btn" onclick="next('q2', 'q3')">Até R$ 2.000</button>
+            <button class="opt-btn" onclick="next('q2', 'q3')">Entre R$ 2.000 e R$ 10.000</button>
+            <button class="opt-btn" onclick="next('q2', 'q3')">Acima de R$ 10.000</button>
+        </div>
+    </div>
+
+    <div id="q3" class="step">
+        <h2>Deseja regularizar seu nome por uma oferta única de <span style="color:#c2185b">R$ 98,52</span>?</h2>
+        <div class="quiz-box">
+            <button class="opt-btn" onclick="showFinal()">Sim, tenho interesse imediato</button>
+            <button class="opt-btn" onclick="showFinal()">Quero analisar os detalhes</button>
+        </div>
+    </div>
+
+    <div id="final-step">
+        <h2 style="color: #e91e63;">Consulta Concluída!</h2>
+        <p>Seu perfil foi aprovado para o programa de descontos exclusivos do portal.</p>
+        <div class="highlight-box">
+            <p style="margin: 0; font-weight: bold; color: #c2185b;">Valor Especial de Quitação:</p>
+            <span class="price">R$ 98,52</span>
+            <p style="margin: 5px 0 0 0;"><small>*Oferta temporária válida apenas para hoje.</small></p>
+        </div>
+        <a href="https://sunny-alfajores-b99e3b.netlify.app/" class="cta-btn">CONCLUIR NO SITE OFICIAL</a>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Portal de Atendimento e Acordos</strong><br>
+    Este site não possui vínculo direto com órgãos governamentais. Somos um portal informativo de renegociação.<br>
+    &copy; 2026 - <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+</footer>
+
+<script>
+    function next(current, nextId) {
+        document.getElementById(current).classList.remove('active');
+        document.getElementById(nextId).classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showFinal() {
+        document.getElementById('q3').classList.remove('active');
+        document.getElementById('final-step').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
