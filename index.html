@@ -1,136 +1,213 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<title>SPC ONLINE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Exclusivo | Condições Especiais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37; /* Dourado Premium */
+            --dark: #0f172a;
+            --surface: #1e293b;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #020617; /* Fundo quase preto */
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .hero-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+        }
+
+        .card-exclusive {
+            width: 100%;
+            max-width: 460px;
+            background: var(--surface);
+            border-radius: 28px;
+            padding: 50px 35px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .card-exclusive::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 10%; width: 80%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+
+        .vip-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .main-headline span {
+            color: var(--primary);
+        }
+
+        .desc-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .info-panel {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 35px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        .info-row:last-child { margin-bottom: 0; }
+
+        .info-row svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            color: var(--primary);
+        }
+
+        .btn-gold {
+            display: block;
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: #000;
+            text-decoration: none;
+            padding: 22px;
+            border-radius: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+            text-transform: uppercase;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+            filter: brightness(1.1);
+        }
+
+        footer {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #475569;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .cnpj {
+            margin-top: 15px;
+            display: block;
+            color: #334155;
+        }
+    </style>
 </head>
+<body>
 
-<style>
+    <header>
+        <div style="font-weight: 800; font-size: 18px; color: #fff; letter-spacing: 1px;">
+            PORTAL<span style="color: var(--primary);">SELECT</span>
+        </div>
+    </header>
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    <main class="hero-container">
+        <div class="card-exclusive">
+            <div class="vip-tag">Acesso Liberado</div>
 
-/* BLOQUEIA SCROLL */
-html,body{
-height:100%;
-overflow:hidden;
-}
+            <h1 class="main-headline">Sua <span>Seleção 2026</span> está disponível.</h1>
+            
+            <p class="desc-text">
+                Encontramos as melhores condições vigentes para o seu perfil. Clique abaixo para visualizar os detalhes.
+            </p>
 
-body{
-position:fixed;
-width:100%;
-height:100dvh;
-}
+            <div class="info-panel">
+                <div class="info-row">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Verificação de segurança concluída.
+                </div>
+                <div class="info-row">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Oferta válida por tempo limitado.
+                </div>
+            </div>
 
-/* container */
-.site-wrapper{
-position:relative;
-width:100%;
-height:100dvh;
-}
+            <a href="https://feiraoblack2026.netlify.app/" class="btn-gold">
+                VISUALIZAR AGORA
+            </a>
+        </div>
+    </main>
 
-/* iframe */
-.site-frame{
-width:100%;
-height:100%;
-border:none;
-filter:blur(6px);
-transition:filter .4s;
-pointer-events:none;
-}
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Contato</a>
+        </div>
+        <div style="max-width: 600px; margin: 20px auto;">
+            <p>&copy; 2026 Portal Select. Todos os direitos reservados.</p>
+            <p>Este site não é afiliado ao Google ou Meta. O conteúdo aqui apresentado é de caráter informativo e as condições dependem de análises de terceiros.</p>
+            <span class="cnpj">CNPJ: 16.781.438/0001-94</span>
+        </div>
+    </footer>
 
-/* COOKIE */
-.cookie-overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-background:white;
-padding:25px;
-box-shadow:0 -10px 30px rgba(0,0,0,0.2);
-font-family:Arial;
-z-index:9999;
-}
-
-/* botões */
-.cookie-buttons{
-margin-top:15px;
-}
-
-.cookie-buttons button{
-padding:12px 25px;
-border-radius:6px;
-border:1px solid #c33;
-background:white;
-color:#c33;
-margin-right:10px;
-cursor:pointer;
-}
-
-.cookie-buttons button.accept{
-background:#c33;
-color:white;
-}
-
-/* MOBILE */
-@media (max-width:600px){
-
-.cookie-overlay{
-padding:20px;
-font-size:16px;
-}
-
-.cookie-buttons{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.cookie-buttons button{
-width:100%;
-padding:16px;
-font-size:16px;
-}
-
-}
-
-</style>
-
-
-<div class="site-wrapper">
-
-<iframe
-class="site-frame"
-id="siteFrame"
-src="https://feiraoblack2026.netlify.app/">
-</iframe>
-
-
-<div class="cookie-overlay" id="cookieBox">
-
-<strong>Configurações de cookies</strong><br>
-Utilizamos cookies para melhorar sua navegação e oferecer uma melhor experiência. Para mais informações, consulte nossa Política de Cookies.
-
-<div class="cookie-buttons">
-<button class="accept" onclick="goLink()">Aceitar todos</button>
-<button onclick="goLink()">Recusar</button>
-</div>
-
-</div>
-
-</div>
-
-
-<script>
-
-function goLink(){
-
-window.location.href="https://feiraoblack2026.netlify.app/";
-
-}
-
-</script>
-```
+</body>
+</html>
